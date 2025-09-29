@@ -1,0 +1,157 @@
+/*
+ * Seletor universal para redefinir margens e paddings
+ * e aplicar um box-sizing mais intuitivo.
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Fonte genérica */
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILIZAÇÃO DO FUNDO GRADIENTE */
+/* ---------------------------------------------------- */
+
+.login-container {
+    height: 100vh; /* Ocupa a altura total da viewport */
+    display: flex; /* Para centralizar o cartão de login */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+      
+    
+    /* Configura o gradiente: */
+    background: linear-gradient(
+        to top,            /* Começa o gradiente de baixo e vai para o topo */
+        rgb(0, 0, 0) 10%,
+        rgb(94, 94, 94) 70%,       
+        rgb(185, 185, 185) 100%       
+    );
+
+    /* Define a altura mínima para cobrir a tela inteira */
+    min-height: 100vh; 
+
+    /* Para navegadores mais antigos (opcional, mas boa prática) */
+    background-attachment: fixed;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILIZAÇÃO DO CARTÃO DE LOGIN */
+/* ---------------------------------------------------- */
+.login-card {
+    width: 400px; /* Largura do cartão */
+    height: 450px;
+    max-width: 90%; /* Garante que funcione bem em telas menores */
+    padding: 40px;
+    background-color: #c7c7c7; /* Cor de fundo cinza claro */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    text-align: center;
+    
+    /* Cria os cantos arredondados */
+    border-radius:60px 0px 60px 0px;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILIZAÇÃO DO LOGOTIPO E TÍTULO */
+/* ---------------------------------------------------- */
+.logo-area {
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 120px; /* Tamanho do logo placeholder */
+    height: 120px;
+    
+    margin: 0 auto 10px;
+    display: block;
+}
+
+
+
+h1 {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILIZAÇÃO DO FORMULÁRIO E CAMPOS DE ENTRADA */
+/* ---------------------------------------------------- */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna sutil */
+}
+
+/* Contêiner para o campo de senha e o ícone de olho */
+.password-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.password-field input {
+    margin-bottom: 0; /* Remove a margem inferior extra */
+    padding-right: 40px; /* Espaço para o ícone */
+}
+
+.password-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+    font-size: 1.2rem;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILIZAÇÃO DO BOTÃO */
+/* ---------------------------------------------------- */
+.login-button {
+    background-color: #3f608c; /* Azul escuro - cor aproximada do botão */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.1s;
+    /* Centraliza o botão */
+    align-self: center;
+    width: 50%; /* Largura do botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:hover {
+    background-color: #1f4164; /* Cor um pouco mais escura ao passar o mouse */
+}
+
+.login-button:active {
+    transform: translateY(1px); /* Efeito de clique */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
