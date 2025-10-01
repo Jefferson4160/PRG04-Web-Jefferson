@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../../assets/icons/favicon-capacete.ico" type="image/x-icon">
+  <title>Imagem dinamica</title>
+</head>
+<body>
+    <a href="../../index.html">Voltar</a>
+    <h1>Lista de Imagens</h1>
+    <ul>
+        <li>800px ➡️ img-800w.jpg</li>
+        <li>600px ➡️ img-600w.jpg</li>
+        <li>400px ➡️ img-400w.jpg</li>
+        <li>300px ➡️ img-300w.jpg</li>
+    </ul>
+    <hr>
+    <!--Aqui o navegador irá escolher uma imagem com base na tela em que será exibida
+        No argumento "sizes" é basicamente um if else, se a tela tiver no máximo 799px ele ocupará 100% do view port
+        Caso sejá igual ou maior que 800px ele ocupará somente 800px
+        
+        O "src" ao final da tag é segurança para o caso de ter erro no calculo do tamanho da tela ou caso o navegador seja antigo e não suporte o srcset-->
+    <img srcset="../../assets/images/img-300w.jpg 300w,
+             ../../assets/images/img-400w.jpg 400w,
+             ../../assets/images/img-600w.jpg 600w,
+			 ../../assets/images/img-800w.jpg 800w"
+			sizes="(max-width: 799px) 100vw, 800px"
+			src="../../assets/images/img-800w.jpg">
+</body>
+</html>
