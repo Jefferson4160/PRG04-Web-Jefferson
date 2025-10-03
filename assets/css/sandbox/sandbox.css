@@ -1,0 +1,62 @@
+h1{
+    color: brown;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.tutorial01{
+    /* 1. Altera o comportamento do elemento para garantir margem automática */
+    display: block; 
+    
+    /* 2. Centraliza o elemento: margens laterais automáticas */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* 3. Mantem afastamento dos outros elementos */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.audioPierrot{
+    /* 1. Altera o comportamento do elemento para garantir margem automática */
+    display: block; 
+    
+    /* 2. Centraliza o elemento: margens laterais automáticas */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* 3. Mantem afastamento dos outros elementos */
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    width: 40%;
+}
+
+.voltar {
+    /* --- Posicionamento Fixo e Localização --- */
+    position: fixed; /* Essencial: Fixa o botão na janela de visualização */
+    top: 20px;       /* Afasta 20px da borda superior */
+    left: 20px;      /* Afasta 20px da borda esquerda */
+    z-index: 1000;   /* Garante que o botão fique acima de qualquer outro conteúdo */
+
+    /* --- Dimensões e Aparência (Pequeno) --- */
+    padding: 4px 10px; /* Define o tamanho do botão (padding menor) */
+    margin: 0;       /* Remove margens auto que centralizavam */
+    
+    /* Cores e Formato do botão 'Voltar' */
+    background-color: #6c757d; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Com o transition aplicamos o hover ao passar o mouse, fazendo a cor de fundo se alterar ao longo de 0.3s*/
+    transition: background-color 0.3s;
+}
+
+.voltar:hover {
+    background-color: #323b42;
+}
