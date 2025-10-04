@@ -6,10 +6,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif; /* Fonte genérica */
+    font-family: Arial, sans-serif;
+    /* Fonte genérica */
 }
 
-body, html {
+body,
+html {
     height: 100%;
     width: 100%;
 }
@@ -19,22 +21,24 @@ body, html {
 /* ---------------------------------------------------- */
 
 .login-container {
-    height: 100vh; /* Ocupa a altura total da viewport */
-    display: flex; /* Para centralizar o cartão de login */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-      
-    
+    height: 100vh;
+    /* Ocupa a altura total da viewport */
+    display: flex;
+    /* Para centralizar o cartão de login */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+
+
     /* Configura o gradiente: */
-    background: linear-gradient(
-        to top,            /* Começa o gradiente de baixo e vai para o topo */
-        rgb(0, 0, 0) 10%,
-        rgb(94, 94, 94) 70%,       
-        rgb(185, 185, 185) 100%       
-    );
+    background: linear-gradient(to top,
+            /* Começa o gradiente de baixo e vai para o topo */
+            #1A5B8A 0%,
+            #F8F9FA 100%);
 
     /* Define a altura mínima para cobrir a tela inteira */
-    min-height: 100vh; 
+    min-height: 100vh;
 
     /* Para navegadores mais antigos (opcional, mas boa prática) */
     background-attachment: fixed;
@@ -44,16 +48,20 @@ body, html {
 /* ESTILIZAÇÃO DO CARTÃO DE LOGIN */
 /* ---------------------------------------------------- */
 .login-card {
-    width: 400px; /* Largura do cartão */
+    width: 400px;
+    /* Largura do cartão */
     height: 450px;
-    max-width: 90%; /* Garante que funcione bem em telas menores */
+    max-width: 90%;
+    /* Garante que funcione bem em telas menores */
     padding: 40px;
-    background-color: #c7c7c7; /* Cor de fundo cinza claro */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    background-color: #F8F9FA;
+    /* Cor de fundo cinza claro */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
     text-align: center;
-    
+
     /* Cria os cantos arredondados */
-    border-radius:60px 0px 60px 0px;
+    border-radius: 60px 0px 60px 0px;
 }
 
 /* ---------------------------------------------------- */
@@ -64,9 +72,10 @@ body, html {
 }
 
 .logo {
-    width: 120px; /* Tamanho do logo placeholder */
+    width: 120px;
+    /* Tamanho do logo placeholder */
     height: 120px;
-    
+
     margin: 0 auto 10px;
     display: block;
 }
@@ -96,14 +105,17 @@ label {
     margin-top: 10px;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"],
+input[type="password"] {
+    
     width: 100%;
     padding: 5px;
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
     font-size: 1rem;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna sutil */
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+    /* Sombra interna sutil */
 }
 
 /* Contêiner para o campo de senha e o ícone de olho */
@@ -113,8 +125,10 @@ input[type="text"], input[type="password"] {
 }
 
 .password-field input {
-    margin-bottom: 0; /* Remove a margem inferior extra */
-    padding-right: 40px; /* Espaço para o ícone */
+    margin-bottom: 0;
+    /* Remove a margem inferior extra */
+    padding-right: 40px;
+    /* Espaço para o ícone */
 }
 
 .password-icon {
@@ -127,11 +141,20 @@ input[type="text"], input[type="password"] {
     font-size: 1.2rem;
 }
 
+input[type="text"]:focus, input[type="password"]:focus {
+    /* Remove a borda padrão que aparece ao focar */
+    outline: none; 
+    
+    /* Aplica uma sombra externa sutil com a Cor de Destaque (Laranja) */
+    box-shadow: 0 0 5px rgba(255, 140, 66, 0.8); /* Cor Laranja com opacidade */
+}
+
 /* ---------------------------------------------------- */
 /* ESTILIZAÇÃO DO BOTÃO */
 /* ---------------------------------------------------- */
 .login-button {
-    background-color: #3f608c; /* Azul escuro - cor aproximada do botão */
+    background-color: #FF8C42;
+    /* Azul escuro - cor aproximada do botão */
     color: white;
     padding: 5px 50px;
     border: none;
@@ -143,15 +166,50 @@ input[type="text"], input[type="password"] {
     transition: background-color 0.3s, transform 0.1s;
     /* Centraliza o botão */
     align-self: center;
-    width: 50%; /* Largura do botão */
+    width: 50%;
+    /* Largura do botão */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .login-button:hover {
-    background-color: #1f4164; /* Cor um pouco mais escura ao passar o mouse */
+    background-color: #e97827;
+    /* Cor um pouco mais escura ao passar o mouse */
 }
 
 .login-button:active {
-    transform: translateY(1px); /* Efeito de clique */
+    transform: translateY(1px);
+    /* Efeito de clique */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------------------------------------------- */
+/* ESTILIZAÇÃO DO BOTÃO VOLTAR */
+/* ---------------------------------------------------- */
+.voltar {
+    /* --- Posicionamento Fixo e Localização --- */
+    position: fixed; /* Essencial: Fixa o botão na janela de visualização */
+    top: 20px;       /* Afasta 20px da borda superior */
+    left: 20px;      /* Afasta 20px da borda esquerda */
+    z-index: 1000;   /* Garante que o botão fique acima de qualquer outro conteúdo */
+
+    /* --- Dimensões e Aparência (Pequeno) --- */
+    padding: 4px 10px; /* Define o tamanho do botão (padding menor) */
+    margin: 0;       /* Remove margens auto que centralizavam */
+    
+    /* Cores e Formato do botão 'Voltar' */
+    background-color: #4A788A; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Com o transition aplicamos o hover ao passar o mouse, fazendo a cor de fundo se alterar ao longo de 0.3s*/
+    transition: background-color 0.3s;
+}
+
+.voltar:hover {
+    background-color: #1A5B8A;
 }

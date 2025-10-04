@@ -40,3 +40,20 @@ Não existe um padrão definido de como estruturar um projeto front-end. Deste m
 
 ### Escalabilidade
 - Ao separarmos o projeto dessa maneira, fica mais fácil **adicionar novas funcionalidades** (como o módulo de Usuário, Financeiro, etc.) ou páginas sem perturbar a estrutura existente. Essa organização permite que o projeto evolua de forma controlada.
+
+## Paleta de Cores
+
+![Slide-da-aua-de-programação-WEB](assets/images/complementares.jpg) 
+Seguindo esta lógica e usando o <a href="https://color.adobe.com/">color.adobe.com</a> foi adotada a seguinte paleta:
+<img src="assets/images/paleta-de-cores.jpeg" width="400">
+
+
+| Cor | Código Hexadecimal | Uso Principal e Propósito |
+| :--- | :--- | :--- |
+| **Azul Principal (Confiança)** | `#1A5B8A` | **Cor da Marca e Profissionalismo.** Usado em cabeçalhos, rodapés, planos de fundo escuros, tipografia principal da marca e ícones que transmitem estabilidade. |
+| **Laranja de Ação (Destaque)** | `#FF8C42` | **Call-to-Action (CTA) e Alerta.** Uso exclusivo para botões primários ("Entrar", "Salvar", "Iniciar Novo Projeto"), indicadores de atenção e elementos que exigem ação imediata do usuário. |
+| **Azul Secundário (Suporte)** | `#4A788A` | **Cor de Suporte e Fundo.** Usado para planos de fundo de cartões secundários, barras de navegação laterais e como cor de borda ou sombra para elementos de bloco. |
+| **Cinza Neutro (Base)** | `#F8F9FA` | **Backgrounds e Legibilidade.** Fundo principal de toda a página e de grandes blocos de conteúdo. Garante que as cores de destaque se sobressaiam. |
+| **Branco** | `#FFFFFF` | **Tipografia e Campos de Entrada.** Cor do texto sobre fundos escuros, fundo de cartões e áreas de input para garantir contraste máximo e limpeza. |
+| **Verde (Sucesso)** | `#4CAF50` | **Feedback Positivo.** Mensagens de notificação de sucesso ("Projeto Concluído", "Salvo com Sucesso") e indicadores de status positivo. |
+| **Vermelho (Perigo/Erro)** | `#DC3545` | **Feedback Negativo.** Mensagens de erro, alertas de exclusão, botões de "Cancelar" ou indicadores de status crítico. |
